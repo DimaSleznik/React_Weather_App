@@ -1,5 +1,5 @@
 import React from "react";
-import cloudy from './cloudy.png'
+import cloudy from "../img/cloudy.png";
 function WeatherPic() {
   return (
     <div className="weather_pic">

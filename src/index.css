@@ -28,20 +28,30 @@ code {
   min-height: 50vh;
 }
 .WeatherInfo {
-  min-height: 200px;
-  
+  display: flex;
+  height: 40vh;
 }
-.SelectCity{
+.right_block {
+  font-size: 1.2em;
+  min-height: 40vh;
+  min-width: 50%;
+}
+.SelectCity {
   min-width: 360px;
   margin-top: 20px;
   margin-left: 50%;
   transform: translateX(-50%);
 }
 .SelectCity button {
-  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 0%, #9EEFE1 100%);
-  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  background-image: linear-gradient(
+    to right,
+    #9eefe1 0%,
+    #4830f0 0%,
+    #9eefe1 100%
+  );
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   background-size: 200% auto;
-  transition: .5s;
+  transition: 0.5s;
   letter-spacing: 2px;
   cursor: pointer;
   font-size: 1.2em;
@@ -51,31 +61,52 @@ code {
   border: none;
   height: 30px;
 }
-.SelectCity button:hover{
+.SelectCity button:hover {
   background-position: right center;
 }
-.SelectCity input{
+.SelectCity input {
   background-color: rgba(245, 245, 245, 0.39);
   color: rgb(255, 255, 255);
   border-radius: 5px;
   margin-right: 5px;
   height: 30px;
 }
-.city_name{
+.city_name {
   color: rgba(0, 0, 0, 0.712);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 2em;
   margin-top: 5%;
   margin-left: 20%;
 }
-.Temperture{
-    margin-left: 50px;
-    margin-top: 8%;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5em;
-  }
-.Temperture>div{
-     
-     margin-top: 20px;
-} 
+.Temperture {
+  margin-left: 50px;
+  margin-top: 8%;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+}
+.Temperture > div {
+  margin-top: 20px;
+}
 
+.alert {
+  color: rgba(0, 0, 0, 0.856);
+  font-size: 2.5em;
+  font-weight: 350;
+  text-align: center;
+  margin-top: 10%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.weather_pic {
+  margin-left: 50%;
+  transform: translateX(-25%);
+}
+.weather_pic img {
+  width: 150px;
+  height: 130px;
+}
+.weather_description {
+  font-size: 1.5em;
+  text-align: center;
+  width: 100%;
+}

@@ -2,11 +2,13 @@ import React from "react";
 import { useState } from "react";
 import WeatherInfo from "./companents/WeatherInfo";
 import Form from "./companents/Form";
+import Alert from "./companents/Alert";
+
 
 function App() {
+  const getWeather_func = getWeather.bind(this);
   const [Weather_data, setWeather] = useState({});
   async function getWeather(e) {
-    console.log("work");
     e.preventDefault();
     const city = e.target.elements.city.value || "No_select";
     const result = await fetch(
@@ -23,7 +25,7 @@ function App() {
       <div className="main_block">
         <Form getWeather={getWeather}></Form>
 
-      {JSON.stringify(Weather_data) === "{}" || Weather_data.cod === "404"?'Введите Город':<WeatherInfo WeatherData={Weather_data} />}
+      {JSON.stringify(Weather_data) === "{}" || Weather_data.cod === "404"?<Alert Weather_state = {Weather_data}/>:<WeatherInfo WeatherData={Weather_data} />}
       </div>
     </div>
   );
